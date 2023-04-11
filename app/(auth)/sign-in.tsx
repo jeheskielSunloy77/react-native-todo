@@ -64,12 +64,15 @@ export default function SignIn() {
 				<TextInput
 					style={styles.textInput}
 					placeholder='Email'
+					textContentType='emailAddress'
 					value={loginDetails.email}
 					onChangeText={(email) => setLoginDetails({ ...loginDetails, email })}
 				/>
 				<TextInput
 					style={styles.textInput}
 					placeholder='Password'
+					secureTextEntry
+					textContentType='password'
 					value={loginDetails.password}
 					onChangeText={(password) => setLoginDetails({ ...loginDetails, password })}
 				/>
@@ -78,12 +81,14 @@ export default function SignIn() {
 						<TextInput
 							style={styles.textInput}
 							placeholder='Name'
+							textContentType='name'
 							value={loginDetails.name}
 							onChangeText={(name) => setLoginDetails({ ...loginDetails, name })}
 						/>
 						<TextInput
 							style={styles.textInput}
 							placeholder='Avatar URL'
+							textContentType='URL'
 							value={loginDetails.avatar}
 							onChangeText={(avatar) => setLoginDetails({ ...loginDetails, avatar })}
 						/>
